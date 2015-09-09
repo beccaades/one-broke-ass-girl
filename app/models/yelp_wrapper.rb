@@ -1,0 +1,3 @@
+class YelpWrapper 
+
+end
