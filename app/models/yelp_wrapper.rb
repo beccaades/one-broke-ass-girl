@@ -6,7 +6,7 @@ class YelpWrapper
   end
 
   def search_by_coords
-    response = self.client.search_by_coordinates(coordinates = { latitude: 40.7124, longitude: -73.9670 }, params = {term: "food", limit: "5", sort: "2", radius_filer: "600", deals_filter: true })
+    response = self.client.search_by_coordinates(coordinates = { latitude: 40.7124, longitude: -73.9670 }, params = {term: "cheap food", limit: "5", sort: "2", radius_filer: "600", deals_filter: true })
     #array of top 5 restaurants
     response.businesses
     #name of restaurant

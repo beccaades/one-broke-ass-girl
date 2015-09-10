@@ -26,9 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'yelp', require: 'yelp'
 #to hide api keys
 gem 'figaro'
+#to play with the locu api
+gem 'httparty'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use Unicorn as the app server
 # gem 'unicorn'
 
