@@ -1,4 +1,5 @@
 class LocuWrapper
+  require 'pp'
   include HTTParty
   base_uri 'http://api.locu.com/v1_0'
   default_params :output => 'json'
@@ -13,7 +14,11 @@ class LocuWrapper
   def restaurants
     response = self.class.get("%s%s" % [LOCU_API_QUERY_ENDPOINT, @app_key], format: :json)
     parsed_response = JSON.parse(response.body)
-    /response["objects"][0]["lat"]
+    puts str =JSON.pretty_generate(parsed_response)
+    # response["objects"][0]
+    # response["objects"][0]
+    # response["objects"][0]["lat"]
+    # response["objects"][0]["long"]
   end
 
   def menu(venue_id)

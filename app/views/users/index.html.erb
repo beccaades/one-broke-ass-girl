@@ -1,15 +1,10 @@
-<script type="text/javascript">
+<script type>
     $(function(){
-      $("#location").click(initiate_geolocation);
-  });
+      getCoords(function(latitude,longitude){
 
-  function initiate_geolocation(){
-    navigator.geolocation.getCurrentPosition(handle_geolocation_query);
-  }
-
-  function handle_geolocation_query(position){
-    alert('Lat: ' + position.coords.latitude + ' ' + 
-          'Lon: ' + position.coords.longitude); 
-  }
+      });
+    });
+    var visitorName = prompt("Hi Broke-Ass Girl!  What's your name today?")
+    console.log(visitorName)
 </script>
-<button id="location">Find My location</button>
+
