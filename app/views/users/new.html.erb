@@ -1,0 +1,15 @@
+<div id="error">You need Javascript enabled for this application to work!</div>
+<p id="hud">Aquiring Location</p>
+<div id="location">
+<%=hidden_field_tag :latitude %>
+<%=hidden_field_tag :longitude %>
+<%=submit_tag "Hyperglycemia Countdown Begins Now!" %>
+</div>
+<script>
+  $(function(){
+    getCoords(function(latitude,longitude){
+      debugger;
+    });
+  });
+</script>
+
