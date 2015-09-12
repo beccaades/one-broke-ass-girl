@@ -3,12 +3,15 @@
 <div id="location">
 <%=hidden_field_tag :latitude %>
 <%=hidden_field_tag :longitude %>
-<%=submit_tag "Hyperglycemia Countdown Begins Now!" %>
+<%=submit_tag "Hyperglycemia Countdown Begins Now!", :id => "submit" %>
 </div>
 <script>
-  $(function(){
+  $(function(){ 
+    $("#submit").hide(); 
     getCoords(function(latitude,longitude){
-      debugger;
+      $("#latitude").val(latitude);
+      $("#longitude").val(longitude);
+      $("#submit").show();
     });
   });
 </script>
